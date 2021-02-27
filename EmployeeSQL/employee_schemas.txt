@@ -1,0 +1,34 @@
+Title
+-
+Title_ID VARCHAR PK
+Tiltle VARCHAR
+
+Department
+--
+ID VARCHAR PK
+Dept_Name VARCHAR
+
+Employees
+-
+Emp_ID INTEGER PK
+Title VARCHAR FK - Title.Title_ID 
+Birth_Date DATE 
+First_Name VARCHAR 
+Last_Name VARCHAR 
+SEX VARCHAR 
+Hire_Date DATE
+
+Emp_Dept
+-
+Emp_ID INTEGER PK FK - Employees.Emp_ID
+Department_ID VARCHAR PK FK - Department.ID
+
+Mgr_Dept
+-
+Department_ID VARCHAR PK FK - Department.ID
+Emp_ID INTEGER PK FK - Employees.Emp_ID
+
+Salaries
+-
+Emp_ID INTEGER PK FK - Employees.Emp_ID
+Salary INT 
